@@ -23,7 +23,7 @@ public class UserController {
     @GetMapping("/getapifromorder")
     public String getMethodName() {
         // this is a method to get data from order before use eureka.
-        String response = restTemplate.getForObject("http://localhost:8082/order/testorder", String.class);
+        String response = restTemplate.getForObject("http://orderservice:8082/order/testorder", String.class);
         return response;
     }
     
